@@ -1,6 +1,28 @@
 @GaNe_HostAddress = http://localhost:5135
 
-GET {{GaNe_HostAddress}}/weatherforecast/
+### Create adventurer
+POST {{GaNe_HostAddress}}/api/Adventure/create
+Content-Type: application/json
+
+{
+  "name": "Aragorn",
+  "archetype": 1,
+  "sex": 0,
+  "isLive": true,
+  "rating": 10
+}
+
+### Get all adventurers
+GET {{GaNe_HostAddress}}/api/Adventure/all
 Accept: application/json
 
-###
+### Get adventurer by id (200)
+GET {{GaNe_HostAddress}}/api/Adventure/00000000-0000-0000-0000-000000000000
+Accept: application/json
+
+### Get adventurer by id (404)
+GET {{GaNe_HostAddress}}/api/Adventure/11111111-1111-1111-1111-111111111111
+Accept: application/json
+
+### Mark adventurer dead
+POST {{GaNe_HostAddress}}/api/Adventure/00000000-0000-0000-0000-000000000000/dead
