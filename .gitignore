@@ -1,0 +1,23 @@
+## Build
+bin/
+obj/
+out/
+
+## IDE / OS
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+## Secrets / local overrides
+appsettings.Development.json
+*.DotSettings.user
+
+## Logs / misc
+*.log
+*.db
+*.sqlite

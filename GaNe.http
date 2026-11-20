@@ -1,0 +1,6 @@
+@GaNe_HostAddress = http://localhost:5135
+
+GET {{GaNe_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
